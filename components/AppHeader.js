@@ -1,15 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
+  View,
   Text,
-  View
+  StyleSheet
 } from 'react-native';
+import { Link } from 'react-router-native'
+import { Icons } from './BasicCompenents'
 
 export  class AppHeader extends Component<Props> {
   render() {
     return (
-      <View >
-        <Text> hi </Text>
-      </View>
+        <View style={styles.header}>
+          <Text style={styles.title}>Seetu</Text>
+        </View>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  header: {
+    height: '20%',
+    backgroundColor: '#ffc107',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 10,
+    color: 'white'
+  }
+})
